@@ -1,0 +1,355 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1137305049, guid: a4865f1ab4504ed8a368670db22f409c, type: 3}
+  m_Name: InspectorConfig
+  m_EditorClassIdentifier: 
+  enableOdinInInspector: 1
+  defaultEditorBehaviour: 11
+  processMouseMoveInInspector: 1
+  drawingConfig:
+    configs:
+    - DrawnTypeName: Kelsey.ButtonConsumeCoin, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.ButtonRewardedAds, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.DisablePicking, Assembly-CSharp-Editor
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.GameComponent, Kelsey
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.GlobalComponent, Kelsey
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.MobileDialogConfirm, Kelsey
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.MobileDialogInfo, Kelsey
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.MobileDialogNeutral, Kelsey
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.RuntimeInitializer, Kelsey
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.SingletonMonoBehaviour`1, Kelsey
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.TestSvg, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.AdsBridge, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.BasePool`1, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.BoosterUnlockAttraction, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.ButtonBooster, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.ButtonCoin, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.CheatAutoPlay, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.CheatBooster, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.CheatCoin, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.CheatFastPlayMode, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.CheatLevel, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.CheatReplay, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.CheatToggleUI, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.CheatWin, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.ChestProgress, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.CoinAttraction, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.DisableOnStart, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.Drill, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.GameBoosterConfig, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.GameBoosterController, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.GameBoosterUnlocker, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.GamePlayStats, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.GameSceneController, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.GameSceneDatabase, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.GameTimeController, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.GlobalData, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.Hammer, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.LevelDatabase, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.LevelDatabaseEditor, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.MenuController, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.MobileCheat, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.NotificationBar, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.NotificationBarPool, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.NotificationManager, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.PanelEndGame, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.PanelInGame, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.PanelMenu, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.PoolCoinAttraction, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.PopupAdsBreak, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.PopupBooster, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.PopupBoosterUnlocked, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.PopupConfirmExit, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.PopupOutOfMove, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.PopupPause, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.PopupSetting, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.PrefabDatabaseEditor, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.SceneLoader, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.ScreenshotLevel, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.SoundController, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.StandaloneCheat, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.StarAttraction, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.StarAttractionPool, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.StarController, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.StarDisplay, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.TextSdkInfo, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.UIBoosterContainer, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.UIMenuController, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.Vacuum, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.VacuumAnimationCallback, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.VibrationController, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.Cheat.PopupCheat, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.InGameRating.AppRating, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.InGameRating.PopupRate`1, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.InGameRating.PopupRateStep1, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.InGameRating.PopupRateStep2, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.InGameRating.PopupRateStep3, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.InGameRating.RateGameManager, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.InGameRating.StarRateItem, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.LevelChest.CatAnimation, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.LevelChest.ChestAnimation, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.LevelChest.CoinBar, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.LevelChest.CrownAnimation, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.LevelChest.LevelChestConfig, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.LevelChest.LevelChestManager, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.LevelChest.PanelCoinBar, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.LevelChest.PopupLevelChest, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.Setting.ButtonMusic, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.Setting.ButtonSound, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.Setting.ButtonVibration, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.Text.TextCurrentLevel, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.Text.TextPlayingCurrentLevel, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.Tutorial.TutorialController, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey._Game.Tutorial.TutorialStep, Assembly-CSharp
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.AssetLoader.AddressableAssetLoaderObject, Kelsey.AssetLoader
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.AssetLoader.PreloadedAssetLoaderObject, Kelsey.AssetLoader
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.AssetLoader.ResourcesAssetLoaderObject, Kelsey.AssetLoader
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.Common.Editor.ProjectWindowUtility+DoCreateScriptableObject,
+        Kelsey.Common.Editor
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.Common.Editor.ProjectWindowUtility+DoCreateScriptAsset,
+        Kelsey.Common.Editor
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.Common.Editor.ExSearchWindow, Kelsey.Common.Editor
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.IAP.IAPDataVariable, Kelsey.Purchase
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.IAP.IAPManager, Kelsey.Purchase
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.Monetization.AdmobAppOpen, Kelsey.Monetization
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.Monetization.AdmobBanner, Kelsey.Monetization
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.Monetization.AdmobInter, Kelsey.Monetization
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.Monetization.AdmobReward, Kelsey.Monetization
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.Monetization.Advertising, Kelsey.Monetization
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.Monetization.ApplovinAppOpen, Kelsey.Monetization
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.Monetization.ApplovinBanner, Kelsey.Monetization
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.Monetization.ApplovinInter, Kelsey.Monetization
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.Monetization.ApplovinReward, Kelsey.Monetization
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.Monetization.AppOpenAdsScriptDefault, Kelsey.Monetization
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.Monetization.BannerAdsScriptDefault, Kelsey.Monetization
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.Monetization.FairBidBanner, Kelsey.Monetization
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.Monetization.FairBidInter, Kelsey.Monetization
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.Monetization.FairBidReward, Kelsey.Monetization
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.Monetization.InterstitialAdsScriptDefault, Kelsey.Monetization
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.Monetization.RewardedAdsScriptDefault, Kelsey.Monetization
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.Monetization.SuperAdsScriptInterstitial, Kelsey.Monetization
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.Monetization.SuperAdsScriptRewarded, Kelsey.Monetization
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.RemoteConfig.RemoteConfig, Kelsey.RemoteConfig
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.SafeArea.RuntimeSafeAreaUpdater, Kelsey.SafeArea
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.SafeArea.SafeAreaComponent, Kelsey.SafeArea
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.SafeArea.UnsafeAreaComponent, Kelsey.SafeArea
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.SceneFlow.FirebaseInitialization, Kelsey.SceneFlow
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.SceneFlow.UnityServiceInitialization, Kelsey.SceneFlow
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.ScrewJam.AnimatingSystem, Kelsey.ScrewJam
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.ScrewJam.AutoPlay, Kelsey.ScrewJam
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.ScrewJam.Bar, Kelsey.ScrewJam
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.ScrewJam.BarDestroyer, Kelsey.ScrewJam
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.ScrewJam.BarPhysic, Kelsey.ScrewJam
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.ScrewJam.BarRenderer, Kelsey.ScrewJam
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.ScrewJam.BarSound, Kelsey.ScrewJam
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.ScrewJam.Box, Kelsey.ScrewJam
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.ScrewJam.BoxAnimation, Kelsey.ScrewJam
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.ScrewJam.BoxCatchAnimation, Kelsey.ScrewJam
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.ScrewJam.BoxesContainer, Kelsey.ScrewJam
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.ScrewJam.BoxRenderer, Kelsey.ScrewJam
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.ScrewJam.BoxSlot, Kelsey.ScrewJam
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.ScrewJam.BoxSound, Kelsey.ScrewJam
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.ScrewJam.CacheHoles, Kelsey.ScrewJam
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.ScrewJam.DragLevelControl, Kelsey.ScrewJam
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.ScrewJam.EventSelectScrew, Kelsey.ScrewJam
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.ScrewJam.FastPlayMode, Kelsey.ScrewJam
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.ScrewJam.GameCamera, Kelsey.ScrewJam
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.ScrewJam.GameDifficultHandle, Kelsey.ScrewJam
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.ScrewJam.GameLayer, Kelsey.ScrewJam
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.ScrewJam.Hole, Kelsey.ScrewJam
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.ScrewJam.HoleColor, Kelsey.ScrewJam
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.ScrewJam.HorizontalGrid, Kelsey.ScrewJam
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.ScrewJam.Level, Kelsey.ScrewJam
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.ScrewJam.LevelDesignSceneAutoPlay, Kelsey.ScrewJam
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.ScrewJam.LevelLoader, Kelsey.ScrewJam
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.ScrewJam.LoadLevelTool, Kelsey.ScrewJam
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.ScrewJam.OutOfMoveUpdater, Kelsey.ScrewJam
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.ScrewJam.PickScrewHandle, Kelsey.ScrewJam
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.ScrewJam.PlaHelper, Kelsey.ScrewJam
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.ScrewJam.PlaySceneController, Kelsey.ScrewJam
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.ScrewJam.ReloadSceneTool, Kelsey.ScrewJam
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.ScrewJam.Screw, Kelsey.ScrewJam
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.ScrewJam.ScrewAnimation, Kelsey.ScrewJam
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.ScrewJam.ScrewRenderer, Kelsey.ScrewJam
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.ScrewJam.ScrewSound, Kelsey.ScrewJam
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.ScrewJam.SoundFxBase, Kelsey.ScrewJam
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.SquirrelCache.BoundsVariable, Squirrel.Cache
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.SquirrelCache.ScaleWithCanvasBounder, Squirrel.Cache
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.Tracking.AdjustTracking, Kelsey.Tracking
+      EditorTypeName: 
+    - DrawnTypeName: Kelsey.Tracking.FirebaseTracking, Kelsey.Tracking
+      EditorTypeName: 
