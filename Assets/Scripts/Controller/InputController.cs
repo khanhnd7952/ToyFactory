@@ -5,8 +5,8 @@ namespace Controller
 {
     public class InputController : MonoBehaviour
     {
-        private const float PRESS_TIME = 0.25f;
-        private const float DELAY_TIME = 0.5f;
+        private const float PRESS_TIME = 0.15f;
+        private const float DELAY_TIME = 0.2f;
         private bool _press;
 
         Line _selectingLine;

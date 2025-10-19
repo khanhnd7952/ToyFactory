@@ -11,10 +11,10 @@ public class BrickContainer : MonoBehaviour, IBrickContainer
 {
     [SerializeField] private Transform[] slots;
 
-    public List<Brick> Bricks { get; } = new List<Brick>(4);
+    public EColorType Color { get; private set; }
+    public Brick[] Bricks { get; private set; }
 
     private SplinePositioner _positioner;
-    private SplineComputer _splineComputer;
 
     private void Awake()
     {
@@ -23,28 +23,24 @@ public class BrickContainer : MonoBehaviour, IBrickContainer
 
     public void SetSpline(SplineComputer splineComputer)
     {
-        _splineComputer = splineComputer;
         _positioner.spline = splineComputer;
         _positioner.SetPercent(0f);
     }
 
     public async UniTask MoveBricks(Brick[] bricks)
     {
+        Bricks = bricks;
+        Color = bricks[0].Color;
         for (var i = 0; i < bricks.Length; i++)
         {
             var brick = bricks[i];
             var target = slots[i];
             brick.transform.SetParent(target);
-            brick.transform.DOLocalJump(Vector3.zero, 2f, 1, 0.15f).SetEase(Ease.InQuad);
+            brick.transform.DOLocalJump(Vector3.zero, 5f, 1, 0.15f).SetEase(Ease.InQuad);
             brick.transform.DOLocalRotate(Vector3.zero, 0.15f).SetEase(Ease.InQuad);
+            brick.transform.DOScale(1f, 0.15f).SetEase(Ease.InQuad);
             await UniTask.Delay(TimeSpan.FromSeconds(0.05f));
         }
-    }
-
-    [Button]
-    void TestMoveBrick(Brick[] bricks)
-    {
-        MoveBricks(bricks).Forget();
     }
 
     public void UpdatePosition(float range)
@@ -60,4 +56,8 @@ public class BrickContainer : MonoBehaviour, IBrickContainer
         return (float)_positioner.GetPercent();
     }
 
+    public void SetPosition(float startLinePercent)
+    {
+        _positioner.SetPercent(startLinePercent);
+    }
 }

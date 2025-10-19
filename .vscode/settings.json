@@ -56,7 +56,7 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "screw-craze-3d.sln",
+    "dotnet.defaultSolution": "ToyFactory.sln",
     "dotnet.preferCSharpExtension": true,
     "dotrush.roslyn.projectOrSolutionFiles": [
         "d:\\UnityProjects\\screwdom-3d\\screw-craze-3d\\screw-craze-3d.sln"

@@ -12,19 +12,24 @@ public class Line : MonoBehaviour
 
     private void Start()
     {
-        _rows = new Queue<LineRow>();
+     
+    }
 
-        for (int i = 0; i < 100; i++)
+    public void Spawn(EColorType[] Data)
+    {
+        foreach (var colorType in Data)
         {
             var row = Instantiate(linePrefab, rowContainer);
-            row.transform.localPosition = new Vector3(0, 0, -0.5f * i);
+            row.SetColor(colorType);
             _rows.Enqueue(row);
         }
+        RepositionRows();
     }
 
     public async void PushToConveyor()
     {
         if (_rows.Count == 0) return;
+        if (Conveyor.Instance.IsFull()) return;
         await Conveyor.Instance.InsertBricksToConveyor(_rows.Dequeue().Bricks);
         RepositionRows();
     }
@@ -43,7 +48,7 @@ public class Line : MonoBehaviour
         for (int i = 0; i < cache.Length; i++)
         {
             var currentPos = cache[i].transform.localPosition;
-            var targetPos = new Vector3(0, 0, -0.5f * i);
+            var targetPos = new Vector3(0, 0, -0.9f * i);
             cache[i].transform.DOLocalMove(targetPos, 0.2f).SetEase(Ease.InSine);
         }
     }

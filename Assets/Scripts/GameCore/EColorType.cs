@@ -1,11 +1,9 @@
-﻿namespace DefaultNamespace
+﻿public enum EColorType
 {
-    public enum EColorType
-    {
-        Red = 0,
-        Green = 1,
-        Blue = 2,
-        Purple = 3,
-        Orange = 4,
-    }
+    Red = 0,
+    Yellow = 1,
+    Cyan = 2,
+    Blue = 3,
+    Purple = 4,
+    Pink = 5,
 }

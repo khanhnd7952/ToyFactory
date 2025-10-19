@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Cysharp.Threading.Tasks;
 using Dreamteck.Splines;
+using Kelsey.UGUI;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -10,6 +11,7 @@ public class Conveyor : MonoBehaviour
 {
     public static Conveyor Instance { get; private set; }
     [SerializeField] public int Capacity = 20;
+    [SerializeField] private float startLinePercent = 0.2f;
 
     [SerializeField] private SplineComputer splineComputer;
     [SerializeField] private BrickContainer ContainerPrefab;
@@ -19,7 +21,10 @@ public class Conveyor : MonoBehaviour
     [ShowInInspector, ReadOnly] private List<BrickContainer> containers = new List<BrickContainer>();
     [SerializeField] private float moveSpeed = 0.1f;
     [SerializeField] private float insertMoveSpeed = 0.03f;
-    Dictionary<float, BrickContainer> _containerPositions = new Dictionary<float, BrickContainer>();
+
+    Dictionary<float, OrderConveyor> _conveyorPositions = new Dictionary<float, OrderConveyor>();
+
+    private Level _level;
 
     private bool _isBlocking = false;
 
@@ -34,23 +39,44 @@ public class Conveyor : MonoBehaviour
     private void Start()
     {
         _stepDistance = 0.98f / Capacity;
+        _level = Level.Instance;
+    }
+
+    public void Init()
+    {
+        _conveyorPositions = new Dictionary<float, OrderConveyor>();
+        foreach (OrderConveyor orderConveyor in _level.OrderConveyors)
+        {
+            _conveyorPositions.Add(orderConveyor.Percent, orderConveyor);
+        }
     }
 
     private void Update()
     {
         SortContainers();
+        CheckBuildModel();
         UpdateConveyor();
+        UpdateCapacityFill();
+    }
+
+    void UpdateCapacityFill()
+    {
+        ConveyorCapacity.Instance.SetFillAmount(containers.Count / (float)Capacity);
     }
 
     void SortContainers()
     {
-        _containerPositions.Clear();
-        containers.Sort((a, b) => a.GetPosition().CompareTo(b.GetPosition()));
-        foreach (var container in containers)
+        containers.Sort((a, b) =>
         {
-            var pos = container.GetPosition();
-            _containerPositions.Add(pos, container);
-        }
+            var posA = a.GetPosition();
+            var posB = b.GetPosition();
+
+            // Xử lý trường hợp container đi qua 1 sẽ về 0
+            if (posA < startLinePercent) posA += 1f;
+            if (posB < startLinePercent) posB += 1f;
+
+            return posA.CompareTo(posB);
+        });
     }
 
     void UpdateConveyor()
@@ -69,15 +95,42 @@ public class Conveyor : MonoBehaviour
             var currentPos = container.GetPosition();
             var nextPos = nextContainer.GetPosition();
             // check if subtract position is greater than step distance, position is between 0 and 1
-            if (isLastElement && (_isBlocking || _isInserting) && currentPos >= 1 - _stepDistance)
+            if (isLastElement && (_isBlocking || _isInserting) &&
+                (currentPos < startLinePercent && Mathf.Abs(startLinePercent - currentPos) < _stepDistance))
             {
             }
             else
             {
-                var subtract1 = Mathf.Abs(currentPos - nextPos);
-                if (subtract1 > _stepDistance)
+                var subtract1 = nextPos - currentPos;
+                if (subtract1 < 0 || subtract1 > _stepDistance)
                 {
-                    container.UpdatePosition((_isInserting || _isBlocking ? insertMoveSpeed : moveSpeed) * Time.deltaTime);
+                    container.UpdatePosition(((_isInserting || _isBlocking) ? insertMoveSpeed : moveSpeed) *
+                                             Time.deltaTime);
+                }
+            }
+        }
+    }
+
+    void CheckBuildModel()
+    {
+        foreach (var conveyorMapping in _conveyorPositions)
+        {
+            var pos = conveyorMapping.Key;
+            var model = conveyorMapping.Value.CurrentOrder;
+            if (model == null) continue;
+
+            foreach (var order in containers)
+            {
+                var percent = order.GetPosition();
+                if (Mathf.Abs(percent - pos) < 0.005f)
+                {
+                    var hasColor = model.IsHasColor(order.Color);
+                    if (hasColor)
+                    {
+                        containers.Remove(order);
+                        model.Build(order.Bricks, () => { Destroy(order.gameObject); }).Forget();
+                        break;
+                    }
                 }
             }
         }
@@ -91,9 +144,10 @@ public class Conveyor : MonoBehaviour
     public bool CanInsert()
     {
         if (containers.Count == 0) return true;
+        if (IsFull()) return false;
         var first = containers[0];
         var percent = first.GetPosition();
-        return percent >= _stepDistance;
+        return percent >= startLinePercent + _stepDistance;
     }
 
     public void SetBlocking(bool blocking)
@@ -105,11 +159,11 @@ public class Conveyor : MonoBehaviour
     {
         if (IsFull()) return;
         _isInserting = true;
-        
-        while (!CanInsert())
-        {
-            await UniTask.Yield();
-        }
+
+        // while (!CanInsert())
+        // {
+        //     await UniTask.Yield();
+        // }
 
         var container = CreateContainer();
         await UniTask.WaitForEndOfFrame();
@@ -123,6 +177,7 @@ public class Conveyor : MonoBehaviour
     {
         var container = Instantiate(ContainerPrefab, containerParent);
         container.SetSpline(splineComputer);
+        container.SetPosition(startLinePercent);
         //container.SetNeighbors(containers[0] , containers[^1]);
         containers.Add(container);
         return container;
